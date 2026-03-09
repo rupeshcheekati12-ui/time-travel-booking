@@ -20,7 +20,7 @@ sns = boto3.client('sns', region_name=REGION)
 users_table = dynamodb.Table('travel-Users')
 bookings_table = dynamodb.Table('Bookings')
 
-SNS_TOPIC_ARN = "arn:aws:ec2:us-east-1:117949646235:instance/i-0b3a235fbda701507"
+SNS_TOPIC_ARN = "arn:aws:sns:us-east-1:117949646235:TravelGo5:49d5c77f-ab3f-47df-883d-94f7281d741d"
 
 # ---------------- STATIC DATA ----------------
 bus_data = [
@@ -196,5 +196,6 @@ def logout():
 if __name__ == '__main__':
     # Running on 0.0.0.0 for EC2 access, but debug is OFF for safety
     app.run(host='0.0.0.0', port=5000, debug=False)
+
 
 
